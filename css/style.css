@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #edf2f8;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+}
+
+.testimonials {
+  max-width: 1440px;
+  margin: 60px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.card {
+  background: #fff;
+  box-shadow: rgba(7, 4, 26, 0.15) 0px 50px 100px 0px;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card__header p {
+  opacity: 50%;
+}
+
+.card__img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.card__lead {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.card__quote {
+  opacity: 70%;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.card:nth-of-type(1) .card__img,
+.card:nth-of-type(4) .card__img {
+  border: 3px solid #a775f2;
+}
+
+.card--bg-purple {
+  background: hsl(263, 55%, 52%);
+  color: #fff;
+  background-image: url("/images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top 0px right 100px;
+}
+
+.card--bg-gray {
+  background: hsl(217, 19%, 35%);
+  color: #fff;
+}
+
+.card--bg-black {
+  background: hsl(219, 29%, 14%);
+  color: #fff;
+}
+
+.card:nth-of-type(1) {
+  grid-column: 1/3;
+}
+
+.card:nth-of-type(4) {
+  grid-column: 2/4;
+}
+
+.card:nth-of-type(5) {
+  grid-column: 4;
+  grid-row: 1/3;
+}
+
+footer {
+  text-align: center;
+  font-size: 13px;
+  padding: 20px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #47566d;
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .card:nth-of-type(1) {
+    grid-column: 1;
+  }
+
+  .card:nth-of-type(4) {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .card:nth-of-type(5) {
+    grid-column: 1;
+    grid-row: 5;
+  }
+}
